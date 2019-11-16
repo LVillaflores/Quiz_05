@@ -1,8 +1,19 @@
-Script = open('Script.txt', encoding = 'utf-8')
+with open('Script.txt', encoding = 'utf-8') as Script:
+	String = Script.read()
+	String = String.split(' ')
+	print(String)
 
-String = Script.readlines()
-print(String)
+	with open('Test.txt', encoding = 'utf-8') as Test:
+		Check = Test.read()
+		Check = Check.split(' ')
+		print(Check)
 
-# with open('file_name.txt') as file_name:
-# 	if "String" in file_name.read():
-# 		print('String is in File')
+		result = any(elem in Check for elem in String)
+
+		re = []
+		for element in Check:
+			if element in String:
+				re.append(element)
+		print(re)
+		print('Accuracy: ', len(re), '/', len(String))
+		print('Percentage:', (len(re)/len(String))*100, '%')

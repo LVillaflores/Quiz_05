@@ -2,7 +2,7 @@ import speech_recognition as sr
 
 r = sr.Recognizer()
 
-audio = 'file_name.type'
+audio = '6 People/6.flac'
 
 with sr.AudioFile(audio) as source:
 	audio = r.record(source)
@@ -10,7 +10,7 @@ with sr.AudioFile(audio) as source:
 
 try:
 	value = r.recognize_google(audio)
-	file = open("file_name.txt", "a")
+	file = open("6.txt", "a")
 	file.write(value)
 	print('Finished Processing')
 	print(value)

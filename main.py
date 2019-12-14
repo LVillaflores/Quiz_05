@@ -3,7 +3,7 @@ with open('Script.txt', encoding = 'utf-8') as Script:
 	String = String.split(' ')
 	# print(String)
 
-	with open('1.txt', encoding = 'utf-8') as Test:
+	with open('6P.txt', encoding = 'utf-8') as Test:
 		Check = Test.read()
 		Check = Check.split(' ')
 		# print(Check)
